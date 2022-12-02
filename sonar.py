@@ -28,10 +28,10 @@ class Sonar(common.Common):
         dphi[np.where(dphi > np.pi)] -= 2 * np.pi  # возвращаем фи в диапазон
         dphi[np.where(dphi < -np.pi)] += 2 * np.pi
         dphi_mean = sum(dphi) / dphi.size  # среднее значение фи
-        print(dphi_mean)
+        print(dphi_mean)#выводим значение угла
         peleng = np.arcsin((self.c * dphi_mean) / (2 * np.pi * self.fs * self.d))
 
-        print(peleng * (180 / np.pi))
+        print(peleng * (180 / np.pi))#вывод полученного угла в градусах
 
 
 

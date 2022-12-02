@@ -1,7 +1,7 @@
 #получение и зашумление сигналов
 import common
-import numpy  as np
-import turtle as t
+import numpy as np
+#import turtle as t
 import matplotlib.pyplot as plt
 
 class Water(common.Common):
@@ -18,7 +18,7 @@ class Water(common.Common):
                 signal_Right [i] += np.sin(2*np.pi*self.fs*(time[i]-dt))
 
 
-        print(2 * np.pi * self.fs * dt * 180 / np.pi)  # фазу выводим
+        print(2 * np.pi * self.fs * dt * 180 / np.pi)  #выводим исходную фазу
         plt.plot(time, signal_Left, time, signal_Right)
         plt.show()
         return ((time, signal_Left, signal_Right))
